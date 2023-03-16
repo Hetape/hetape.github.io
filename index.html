@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Daltonic | Portfolio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="google-site-verification" content="wGsIEe4wfS1t_qWHA2jYqqxrodq-YwblzRQFLNQdo68" />
+    <!-- Information About Me -->
+    <meta name="title" content="Darlington Gospel Portfolio" />
+    <meta
+      name="description"
+      content="Gospel Darlington kick-started his journey as a software engineer in 2016.
+      Over the years, he has grown full-blown skills in
+      JavaScript stacks such as React,
+      ReactNative, VueJs, and more. Connect with him today!"
+    />
+    <meta name="keywords" content="Portfolio, Resume, Experiences" />
+
+    <!-- FAV AND ICONS   -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Google Font-->
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/plugins/css/bootstrap.min.css" />
+    <!-- Animate CSS-->
+    <link rel="stylesheet" href="assets/plugins/css/animate.css" />
+    <!-- Owl Carousel CSS-->
+    <link rel="stylesheet" href="assets/plugins/css/owl.css" />
+    <!-- Fancybox-->
+    <link rel="stylesheet" href="assets/plugins/css/jquery.fancybox.min.css" />
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body class="dark-vertion black-bg">
+    
+      
+    <!-- </div> -->
+    <div id="App">
+    
+    
+    <!-- Start Loader -->
+    <div class="section-loader">
+      <div class="loader">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- End Loader -->
+
+    <div v-if="queryString.includes('status=success')" class="d-flex justify-content-between align-items-center alert alert-success" role="alert">
+      <span class="text-success">
+        <strong>Fantastic!</strong> Your payment was successful, send me an email let's schedule a class.
+      </span>
+      <span>
+        <a href="#" aria-label="Close">
+          <span class="text-success">&times;</span>
+        </a>
+      </span>
+    </div>
+    
+    <div v-if="queryString.includes('status=cancelled')" class="d-flex justify-content-between align-items-center alert alert-danger" role="alert">
+      <span class="text-danger">
+        <strong>Opps!</strong> Are you having troubles with the payment?, please try again or email me!
+      </span>
+      <span>
+        <a href="#" aria-label="Close">
+          <span class="text-danger">&times;</span>
+        </a>
+      </span>
+    </div>
+
+    
+    <!--
+    ===================
+       NAVIGATION
+    ===================
+    -->
+    <header
+      class="
+        black-bg
+        mh-header mh-fixed-nav
+        nav-scroll
+        mh-xs-mobile-nav
+        wow
+        fadeInUp
+      "
+      id="mh-header"
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg mh-nav nav-btn">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#mh-home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#mh-about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#mh-service">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#mh-skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#mh-experience">Experiences</a>
+                </li>
+                <li v-if="loaded" class="nav-item">
+                  <a class="nav-link" href="#mh-portfolio">Projects</a>
+                </li>
+                <li v-if="loaded" class="nav-item">
+                    <a class="nav-link" href="#mh-blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mh-pricing">Pricing</a>
+                </li>
+                <li v-if="loaded" class="nav-item">
+                    <a class="nav-link" href="#mh-mention">Mention</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--
+    ===================
+        HOME 
+    ===================
+    -->
+    <div id="particles-js">
+      <div class="header">
+        <h1>
+          <span class="site-title" style="user-select: none;">Lucas Gale</span>
+          <br/><br/><br/>
+          <span class="site-description" style="user-select: none;">Blockchain • FullStack</span>
+          <br/><br/>
+          <span style="user-select: none;">Engineer</span>
+        </h1>
+      </div>
+      <a class="down" href="#mh-home" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+    </div>
+    <section class="mh-home" id="mh-home">
+      <div class="home-ovimg">
+        <div class="container">
+          <div
+            class="
+              row
+              xs-column-reverse
+              section-separator
+              vertical-middle-content
+              home-padding
+            "
+          >
+            <div class="col-sm-6">
+              <div class="mh-header-info">
+                <div
+                  class="mh-promo wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                >
+                  <span>Hello I'm</span>
+                </div>
+
+                <h2
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.2s"
+                >
+                  Lucas Gale
+                </h2>
+                <h4
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.3s"
+                >
+                  Blockchain and FullStack Engineer
+                </h4>
+
+                <ul>
+                  <li
+                    class="wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.4s"
+                  >
+                    <i class="fa fa-envelope"></i
+                    ><a href="mailto:">hetape.october@gmail.com</a>
+                  </li>
+                  <li
+                    class="wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.6s"
+                  >
+                    <i class="fa fa-map-marker"></i>
+                    <address>783 Dundas St W, Toronto, ON M6J 1V2, Canada</address>
+                  </li>
+                </ul>
+
+                <ul
+                  class="social-icon wow fadeInUp w-100"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.7s"
+                >
+                  <li class="mr-4">
+                    <a href="https://fb.com/hetape.october" target="_blank">
+                      <i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li class="mr-4">
+                    <a href="https://twitter.com/hetape" target="_blank">
+                      <i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="mr-4">
+                    <a
+                      href="https://www.linkedin.com/in/hetape-1004" target="_blank">
+                      <i class="fab fa-linkedin"></i></a>
+                  </li>
+                  <li class="mr-4">
+                    <a href="https://github.com/hetape" target="_blank">
+                      <i class="fab fa-github"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div
+                class="hero-img wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.6s"
+              >
+                <div class="">
+                  <img src="assets/images/hero.jpg" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ==================
+        ABOUT
+    =================
+    -->
+    <section class="mh-about" id="mh-about">
+      <div class="container">
+        <div class="row section-separator">
+          <div class="col-sm-12 col-md-6">
+            <div
+              class="mh-about-img shadow-2 wow fadeInUp"
+              data-wow-duration="0.8s"
+              data-wow-delay="0.4s"
+            >
+              <img src="assets/images/ab-img.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="mh-about-inner">
+              <h2
+                class="wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.1s"
+              >
+                About Me
+              </h2>
+              <p
+                class="wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.2s"
+              >
+                Passionate Blockchain and FullStack Engineer with over 6 years of hands-on experience in fast-paced and collaborative environment.
+                <br /><br />
+                Highly proficient in NFT , Defi , Web3 FullStack Projects ,Well Versed in scrum and agile methodology. 
+                <br /><br />
+                Stacks include JavaScript, React, Vue, Angular,
+                Node, React Native, NextJs, Solidity, and more.
+              </p>
+              <div
+                class="mh-about-tag wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.3s"
+              >
+                <ul>
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>JavaScript</span></li>
+                  <li><span>Blockchain</span></li>
+                  <li><span>ReactJs</span></li>
+                  <li><span>ReactNative</span></li>
+                  <li><span>VueJs</span></li>
+                  <li><span>NextJs</span></li>
+                  <li><span>NodeJs</span></li>
+                  <li><span>AngularJs</span></li>
+                  <li><span>PHP</span></li>
+                </ul>
+              </div>
+              <a
+                href="./assets/Resume-Darlington-Gospel.pdf"
+                class="btn btn-fill wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.4s"
+                >Downlaod CV <i class="fa fa-download"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ===================
+       SERVICE
+    ===================
+    -->
+    <section class="mh-service" id="mh-service">
+        <div class="container">
+            <div class="row d-flex justify-content-center section-separator">
+                <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <h2>What I do</h2>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                        <i class="fa fa-code iron-color"></i>
+                        <h3>Software Development</h3>
+                        <p>
+                          Do you have a designed UI/UX prototype? At a reasonable cost, I will assist you to translate your ideas from Figma or Adobe XD into a real-world solution.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <i class="fa fa-feather purple-color"></i>
+                        <h3>Technical Writing</h3>
+                        <p>
+                          Are you ready to exemplify your product to your prospective users? I have a track record of demonstrating tech products to a diverse range of online audiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 text-center">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                        <i class="fa fa-user-graduate sky-color"></i>
+                        <h3>Code Instructorship</h3>
+                        <p>
+                          Do you want to learn coding in a one-on-one mentorship session? I will privately coach you from a complete beginner to a master at a flexible schedule.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+     </section>   
+
+    <!--
+    ===================
+       SKILLS
+    ===================
+    -->
+    <section class="mh-skills" id="mh-skills">
+      <div class="container">
+        <div class="row section-separator">
+          <div class="section-title text-center col-sm-12">
+            <!--<h2>Skills</h2>-->
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="mh-skills-inner">
+              <div
+                class="mh-professional-skill wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.3s"
+              >
+                <h3>Technical Skills</h3>
+                <div class="each-skills">
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">HTML</div>
+                        <div class="percentagem-num">100%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">CSS</div>
+                        <div class="percentagem-num">97%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 97%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Javascript</div>
+                        <div class="percentagem-num">97%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 97%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Blockchain</div>
+                        <div class="percentagem-num">90%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 90%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">PHP</div>
+                        <div class="percentagem-num">90%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 90%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Python</div>
+                        <div class="percentagem-num">93%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 93%"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Django</div>
+                        <div class="percentagem-num">93%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 93%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Node.js</div>
+                        <div class="percentagem-num">95%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 95%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">Express/Nest.js</div>
+                        <div class="percentagem-num">90%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 90%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="candidatos">
+                    <div class="parcial">
+                      <div class="info">
+                        <div class="nome">React.js/Next.js/Vue.js/Angular.js</div>
+                        <div class="percentagem-num">97%</div>
+                      </div>
+                      <div class="progressBar">
+                        <div class="percentagem" style="width: 97%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div
+              class="mh-professional-skills wow fadeInUp"
+              data-wow-duration="0.8s"
+              data-wow-delay="0.5s"
+            >
+              <h3>Professional Skills</h3>
+              <ul class="mh-professional-progress">
+                <li>
+                  <div
+                    class="mh-progress mh-progress-circle"
+                    data-progress="85"
+                  ></div>
+                  <div class="pr-skill-name">Communication</div>
+                </li>
+                <li>
+                  <div
+                    class="mh-progress mh-progress-circle"
+                    data-progress="90"
+                  ></div>
+                  <div class="pr-skill-name">Mentorship</div>
+                </li>
+                <li>
+                  <div
+                    class="mh-progress mh-progress-circle"
+                    data-progress="86"
+                  ></div>
+                  <div class="pr-skill-name">Project Management</div>
+                </li>
+                <li>
+                  <div
+                    class="mh-progress mh-progress-circle"
+                    data-progress="97"
+                  ></div>
+                  <div class="pr-skill-name">Creativity</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ===================
+       EXPERIENCES
+    ===================
+    -->
+    <section class="mh-experince" id="mh-experience">
+      <div class="bolor-overlay">
+        <div class="container">
+          <div class="row section-separator">
+            <div class="col-sm-12 col-md-6">
+              <div class="mh-education">
+                <h3
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.2s"
+                >
+                  Education
+                </h3>
+                <div class="mh-education-deatils">
+                  <!-- Education Institutes-->
+                  <div
+                    class="mh-education-item dark-bg wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.6s"
+                  >
+                    <h4>
+                      Bachelor of Computer Science From
+                      <a href="#"
+                        >University of Toronto</a
+                      >
+                    </h4>
+                    <div class="mh-eduyear">2014-2018</div>
+                    <p>
+                      I graduated from college with a CS degree of CGPA of
+                      4.09/5.0 and moving on to completing my M.Sc.
+                    </p>
+                  </div>
+                  <!-- Education Institutes-->
+                  <div
+                    class="mh-education-item dark-bg wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.6s"
+                  >
+                    <h4>
+                      High School Degree From
+                      <a href="#">Western Ahoada County High School</a>
+                    </h4>
+                    <div class="mh-eduyear">2010-2013</div>
+                    <p>
+                      I completed my high school degree with a lightening speed
+                      entrance into the university.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div class="mh-work">
+                <h3>Work Experience</h3>
+                <div class="mh-experience-deatils">
+                  <!-- Education Institutes-->
+                  <div
+                    class="mh-work-item dark-bg wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.7s"
+                  >
+                    <h4>
+                      Intern Course Instructor at <a href="#">Dept. of Computer Science IAUOE</a>
+                    </h4>
+                    <div class="mh-eduyear">2021-2022</div>
+                    <span>Responsibility :</span>
+                    <ul class="work-responsibility">
+                      <li><i class="fa fa-circle"></i>Course Instructorship</li>
+                      <li><i class="fa fa-circle"></i>Administrative Assistance</li>
+                    </ul>
+                  </div>
+                  <!-- Education Institutes-->
+                  <div
+                    class="mh-work-item dark-bg wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.7s"
+                  >
+                    <h4>
+                      Technical Writer (Remote) At <a href="#">CometChat</a>
+                    </h4>
+                    <div class="mh-eduyear">2020-2021</div>
+                    <span>Responsibility :</span>
+                    <ul class="work-responsibility">
+                      <li><i class="fa fa-circle"></i>Project Development</li>
+                      <li><i class="fa fa-circle"></i>Tutorial Writing</li>
+                    </ul>
+                  </div>
+                  <!-- Education Institutes-->
+                  <div
+                    class="mh-work-item dark-bg wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.7s"
+                  >
+                    <h4>
+                      Software Developer (Full-Time) At
+                      <a href="#">GIT Technologies Ltd.</a>
+                    </h4>
+                    <div class="mh-eduyear">2019-2020</div>
+                    <span>Responsibility :</span>
+                    <ul class="work-responsibility">
+                      <li><i class="fa fa-circle"></i>Project Development</li>
+                      <li><i class="fa fa-circle"></i>Project Management</li>
+                      <li><i class="fa fa-circle"></i>Programming Tutor</li>
+                    </ul>
+                  </div>
+                  <!-- Education Institutes-->
+                  <div
+                    class="mh-work-item dark-bg wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.7s"
+                  >
+                    <h4>
+                      Software Developer (Internship) At
+                      <a href="#">White Creativity</a>
+                    </h4>
+                    <div class="mh-eduyear">2018-2019</div>
+                    <span>Responsibility :</span>
+                    <ul class="work-responsibility">
+                      <li><i class="fa fa-circle"></i>Programming Tutor</li>
+                      <li><i class="fa fa-circle"></i>Project Development</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <a
+              href="mailto:darlingtongospel@gmail.com?body=Hi Daltonic, I was browsing your website and wanted to connect.&subject=Partnership Proposal"
+              target="_blank"
+              class="btn btn-fill wow fadeInUp mt-3"
+              data-wow-duration="0.8s"
+              data-wow-delay="0.4s"
+              >Consult Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ===================
+       PORTFOLIO
+    ===================
+    -->
+    <section v-if="loaded" class="mh-portfolio" id="mh-portfolio">
+      <div class="container">
+        <div class="row section-separator">
+          <div
+            class="section-title col-sm-12 wow fadeInUp"
+            data-wow-duration="0.8s"
+            data-wow-delay="0.1s"
+          >
+            <h3>Recent Portfolio</h3>
+          </div>
+          <div class="part col-sm-12">
+            <div class="portfolio-nav col-sm-12" id="filter-button">
+              <ul>
+                <li
+                  data-filter="*"
+                  class="current wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.1s"
+                >
+                  <span>All Categories</span>
+                </li>
+                <li
+                  data-filter=".web"
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.2s"
+                >
+                  <span>Web Dev</span>
+                </li>
+                <li
+                  data-filter=".mobile"
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.3s"
+                >
+                  <span>Mobile Dev</span>
+                </li>
+                <li
+                  data-filter=".graphics"
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.4s"
+                >
+                  <span>Graphics</span>
+                </li>
+                <li
+                  data-filter=".ml"
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.5s"
+                >
+                  <span>ML Dev</span>
+                </li>
+                <li
+                  data-filter=".writing"
+                  class="wow fadeInUp"
+                  data-wow-duration="0.8s"
+                  data-wow-delay="0.5s"
+                >
+                  <span>Technical Writing</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="mh-project-gallery col-sm-12 wow fadeInUp"
+              id="project-gallery"
+            >
+              <div class="row">
+                <div
+                  v-for="project in projects"
+                  :key="project.name"
+                  :class="['grid-item', 'col-md-4', 'col-sm-6', 'col-xs-12', project.fields.type.stringValue]"
+                >
+                  <figure @click="setProject(project.fields)">
+                    <img
+                      :src="project.fields.imgurl.stringValue"
+                      :alt="project.fields.title.stringValue"
+                    />
+                    <figcaption class="fig-caption">
+                      <i class="fa fa-search"></i>
+                      <h5 class="title">
+                        {{project.fields.title.stringValue}}
+                      </h5>
+                      <span class="sub-title">Click to view</span>
+                      <a data-fancybox data-src="#mh"></a>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex col-sm-12 justify-content-center mx-auto mt-5">
+            <a
+                href="javascript:void(0)"
+                class="btn btn-fill wow fadeInUp"
+                data-wow-duration="0.8s"
+                data-wow-delay="0.4s"
+                id="loadMoreProjects"
+                @click="loadMoreProjects()"
+                >Load More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mh-portfolio-modal modal" id="mh">
+        <div class="container">
+          <div class="row mh-portfolio-modal-inner">
+            <div class="col-sm-5">
+              <h2 id="projectTitle"></h2>
+              <p id="projectDesc"></p>
+              <div class="mh-about-tag">
+                <ul id="projectStacks"></ul>
+              </div>
+              <a id="projectDemo" href="#" target="_blank" class="btn btn-fill">Live Demo</a>
+            </div>
+            <div class="col-sm-7">
+              <div class="mh-portfolio-modal-img">
+                <img id="projectImgurl" src="" alt="" class="img-fluid">
+                <p>
+                  <a id="projectRepo" class="text-primary" href="#" target="_blank"
+                    >Repository Link</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--
+    ===================
+       BLOG
+    ===================
+    -->
+    <section v-if="loaded" class="mh-blog" id="mh-blog">
+        <div class="container">
+            <div class="row section-separator">
+                <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                    <h3>Featured Posts</h3>
+                </div>
+                <div v-for="blog in blogs" :key="blog.name" class="col-sm-12 col-md-4">
+                     <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <img :src="blog.fields.imgurl.stringValue" :alt="blog.fields.title.stringValue" class="img-fluid">
+                        <div class="blog-inner text-left">
+                            <h2><a href="javascript:void(0)">{{blog.fields.title.stringValue}}</a></h2>
+                            <div class="mh-blog-post-info">
+                                <ul>
+                                    <li><strong>Post On</strong><a href="javascript:void(0)">{{blog.createTime.split('T')[0]}}</a></li>
+                                    <li><strong>By</strong><a href="javascript:void(0)">{{blog.fields.author.stringValue}}</a></li>
+                                </ul>
+                            </div>
+                            <p>{{truncateString(blog.fields.description.stringValue)}}</p>
+                            <a :href="blog.fields.blogurl.stringValue" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex col-sm-12 justify-content-center mx-auto mt-5">
+                  <a
+                      href="javascript:void(0)"
+                      class="btn btn-fill wow fadeInUp"
+                      data-wow-duration="0.8s"
+                      data-wow-delay="0.4s"
+                      @click="loadMoreBlogs()"
+                      >Load More
+                  </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    ===================
+        PRICING
+    ===================
+    -->
+    <section class="mh-pricing" id="mh-pricing">
+        <div class="">
+            <div class="container">
+                <div class="row section-separator">
+                    <div class="col-sm-12 section-title" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        <h3>Pricing Table</h3>
+                    </div>                   
+                    <div class="col-sm-12 col-md-4">
+                        <div class="mh-pricing dark-bg shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                            <i class="fa fa-file"></i>
+                            <h4>Web 3.0 Classes</h4>
+                            <p>You want a private class with me?</p>
+                            <h5>$47 per hour</h5>
+                            <ul>
+                                <li>Smart Contract Development</li>
+                                <li>DApp Development with React</li>
+                                <li>Testing and Scripting</li>
+                                <li>Mentorship Tips</li>
+                            </ul>
+                            <a href="https://www.buymeacoffee.com/web3classes/e/74614" target="_blank" class="btn btn-fill">Book Class</a>
+                        </div>  
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                      <div class="mh-pricing dark-bg shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                        <i class="fa fa-calendar"></i>
+                          <h4>Consultancy</h4>
+                          <p>Do you have a unique request?</p>
+                          <h5>$55 per hour</h5>
+                          <ul>
+                              <li>Help me resolve my code</li>
+                              <li>Advice me on a Web3 Project</li>
+                              <li>Design me a Web3 Project</li>
+                              <li>Audit my smart contract</li>
+                          </ul>
+                          <a href="https://www.buymeacoffee.com/web3classes/e/78962" target="_blank" class="btn btn-fill">Book Session</a>
+                      </div>  
+                  </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="mh-pricing dark-bg shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
+                            <i class="fa fa-hourglass"></i>
+                            <h4>Project Development</h4>
+                            <p>You want me to build for you?</p>
+                            <h5>$ Partnership</h5>
+                            <ul>
+                                <li>Build me a Smart Contract</li>
+                                <li>Build me a DApp</li>
+                                <li>Write me a Technical article</li>
+                                <li>Hire me for your brand</li>
+                            </ul>
+                            <a href="mailto:darlingtongospel@gmail.com?body=Hi Daltonic, I was browsing your website and wanted to connect.&subject=Partnership Proposal"
+                            target="_blank" class="btn btn-fill">Hire Me</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    ===================
+       MENTIONS
+    ===================
+    -->
+    <section v-if="loaded" class="mh-blog" id="mh-mention">
+      <div class="container">
+          <div class="row section-separator">
+              <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                  <h3>Mentions & Recognitions</h3>
+              </div>
+              <div v-for="mention in mentions" :key="mention.name" class="col-sm-12 col-md-4">
+                   <div class="mh-blog-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                      <img :src="mention.fields.imgurl.stringValue" :alt="mention.fields.title.stringValue" class="img-fluid">
+                  </div>
+              </div>
+              <div class="d-flex col-sm-12 justify-content-center mx-auto mt-5">
+                <a
+                    href="javascript:void(0)"
+                    class="btn btn-fill wow fadeInUp"
+                    data-wow-duration="0.8s"
+                    data-wow-delay="0.4s"
+                    @click="loadMoreMentions()"
+                    >Load More
+                </a>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!--
+    ===================
+       FOOTER 1
+    ===================
+    -->
+    <footer class="mh-footer" id="mh-contact">
+      <div class="map-image image-bg">
+            <div
+              class="col-sm-12 mx-auto mh-copyright wow fadeInUp"
+              data-wow-duration="0.8s"
+              data-wow-delay="0.3s"
+            >
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="text-left text-xs-center">
+                    <p>
+                      <a href="templateshub.net"
+                        >With Love ❤️ Hetape &copy; 2016 - <span id="year"></span
+                      ></a>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="social-icon">
+                    <li>
+                      <a href="https://fb.com/darlington.gospel01" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/idaltonic" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/Daltonic" target="_blank">
+                        <i class="fa fa-github"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/darlington-gospel-aa626b125" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://darlingtongospel.medium.com/" target="_blank">
+                        <i class="fa fa-medium"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</div>
+    <!--
+    ==============
+    * JS Files *
+    ==============
+    -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+
+    <!-- Import JS: Particles Theme -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Import JS: Sweet Scroll -->
+    <script src="./assets/js/sweet-scroll.min.js"></script>
+    <!-- Import JS: Google Analytics -->
+    <script src="./assets/js/google-analytics.js"></script>
+    <!-- Import JS: Main Script -->
+    <script src="./assets/js/main.js"></script>
+
+    
+    <!-- jQuery -->
+    <script src="assets/plugins/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="assets/plugins/js/popper.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/plugins/js/bootstrap.min.js"></script>
+    <!-- owl carousel -->
+    <script src="assets/plugins/js/owl.carousel.js"></script>
+    <!-- validator -->
+    <script src="assets/plugins/js/validator.min.js"></script>
+    <!-- wow -->
+    <script src="assets/plugins/js/wow.min.js"></script>
+    <!-- mixin js-->
+    <script src="assets/plugins/js/jquery.mixitup.min.js"></script>
+    <!-- circle progress-->
+    <script src="assets/plugins/js/circle-progress.js"></script>
+    <!-- jquery nav -->
+    <script src="assets/plugins/js/jquery.nav.js"></script>
+    <!-- Fancybox js-->
+    <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
+    <!-- isotope js-->
+    <script src="assets/plugins/js/isotope.pkgd.js"></script>
+    <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"
+      integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
+    
+    <script>
+      const app = new Vue({
+        el: '#App',
+        data: {
+          title: 'Hello World',
+          URL: 'https://firestore.googleapis.com/v1/',
+          projects: [],
+          mentions: [],
+          projectStore: [],
+          blogs: [],
+          blogStore: [],
+          project: {},
+          projectStart: 0,
+          projectEnd: 6,
+          blogStart: 0,
+          blogEnd: 6,
+          mentionStart: 0,
+          mentionEnd: 6,
+          loaded: false,
+          queryString: false,
+        },
+        created() {
+          this.getProjects()
+          this.getBlogs()
+          this.getMentions()
+
+          this.queryString = window.location.href
+        },
+        methods: {
+          getProjects() {
+            fetch(
+              `${this.URL}projects/portfolio-56269/databases/(default)/documents/projects`
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                this.projectStore = data.documents.sort(function(x, y){
+                    return new Date(y.createTime).getTime() - new Date(x.createTime).getTime();
+                })
+                this.projects.push(...this.projectStore.slice(this.projectStart, this.projectEnd))
+                this.projectStart = this.projectEnd
+                this.projectEnd *= 2
+              })
+          },
+          
+          getBlogs() {
+            fetch(
+              `${this.URL}projects/portfolio-56269/databases/(default)/documents/blogs`
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                this.blogStore = data.documents.sort(function(x, y){
+                    return new Date(y.createTime).getTime() - new Date(x.createTime).getTime();
+                })
+                this.blogs.push(...this.blogStore.slice(this.blogStart, this.blogEnd))
+                this.blogStart = this.blogEnd
+                this.blogEnd *= 2
+                this.loaded = true
+              })
+          },
+          
+          getMentions() {
+            fetch(
+              `${this.URL}projects/portfolio-56269/databases/(default)/documents/mentions`
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                this.mentionStore = data.documents.sort(function(x, y){
+                    return new Date(y.createTime).getTime() - new Date(x.createTime).getTime();
+                })
+                this.mentions.push(...this.mentionStore.slice(this.mentionStart, this.mentionEnd))
+                this.mentionStart = this.mentionEnd
+                this.mentionEnd *= 2
+                this.loaded = true
+              })
+          },
+          
+          loadMoreProjects() {
+            this.projects.push(...this.projectStore.slice(this.projectStart, this.projectEnd))
+            this.projectStart = this.projectEnd
+            this.projectEnd *= 2
+          },
+          
+          loadMoreBlogs() {
+            this.blogs.push(...this.blogStore.slice(this.blogStart, this.blogEnd))
+            this.blogStart = this.blogEnd
+            this.blogEnd *= 2
+          },
+
+          loadMoreMentions() {
+            this.mentions.push(...this.mentionStore.slice(this.mentionStart, this.mentionEnd))
+            this.mentionStart = this.mentionEnd
+            this.mentionEnd *= 2
+          },
+          
+          setProject(project) {
+            $('#projectTitle').text(project.title.stringValue)
+            $('#projectDesc').text(project.description.stringValue)
+            $('#projectRepo').attr('href', project.repo.stringValue)
+            $('#projectDemo').attr('href', project.demo.stringValue)
+            $('#projectImgurl').attr('src', project.imgurl.stringValue)
+            $('#projectImgurl').attr('alt', project.title.stringValue)
+            $('#projectStacks').empty()
+            const stacks = project.stacks.stringValue.split(',')
+            for (const key in stacks) {
+              $('#projectStacks').append(`<li><span>${stacks[key]}</span></li>`)
+            }
+          },
+          truncateString(str, num = 150) {
+            return str.length > num ? str.slice(0, num) + "..." : str;
+          }
+        },
+      })
+    </script>
+  </body>
+</html>
